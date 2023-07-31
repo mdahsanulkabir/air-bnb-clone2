@@ -32,6 +32,7 @@ yarn-error.log*
 
 #other files
 blog_content.docx
+*.docx
 
 # vercel
 .vercel
