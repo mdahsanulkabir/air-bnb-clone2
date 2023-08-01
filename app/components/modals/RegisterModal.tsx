@@ -8,6 +8,7 @@ import { FieldValues, SubmitHandler, useForm } from 'react-hook-form';
 
 import useRegisterModal from '@/app/hooks/useRegisterModal';
 import Modal from './Modal';
+import Heading from '../Heading';
 
 const RegisterModal = () => {
     const registerModal = useRegisterModal();
@@ -45,7 +46,9 @@ const RegisterModal = () => {
         <div
             className='flex flex-col gap-4'
         >
-            Body of register modal
+            <Heading
+                
+            />
         </div>
     )
 
