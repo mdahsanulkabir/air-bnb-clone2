@@ -47,7 +47,8 @@ const RegisterModal = () => {
             className='flex flex-col gap-4'
         >
             <Heading
-                
+                title="Welcome to Airbnb"
+                subtitle='Create an account !'
             />
         </div>
     )
