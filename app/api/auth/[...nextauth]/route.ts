@@ -9,7 +9,7 @@ import { getServerSession } from 'next-auth/next'
 import prisma from "@/app/libs/prismadb";
 
 
-export const authOptions : AuthOptions = {
+const authOptions : AuthOptions = {
     adapter: PrismaAdapter(prisma),
     providers: [
         GithubProvider({
