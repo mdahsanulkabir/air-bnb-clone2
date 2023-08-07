@@ -5,6 +5,7 @@ import './globals.css'
 // import { Inter } from 'next/font/google'
 import { Nunito } from 'next/font/google'
 import ToastProvider from './providers/ToastProvider'
+import LoginModal from './components/modals/LoginModal'
 
 // const inter = Inter({ subsets: ['latin'] })
 const font = Nunito({ subsets: ['latin'] })
@@ -19,6 +20,7 @@ export default function RootLayout({children,}: { children: React.ReactNode}) {
     <html lang="en">
       <body className={font.className}>
         <ToastProvider />
+        <LoginModal />
         <RegisterModal />
         <Navbar />
         {children}

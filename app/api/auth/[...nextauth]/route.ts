@@ -4,11 +4,12 @@ import GoogleProvider from "next-auth/providers/google";
 import GithubProvider from "next-auth/providers/github";
 import CredentialsProvider from "next-auth/providers/credentials";
 import bcrypt from "bcrypt";
+import { getServerSession } from 'next-auth/next'
 
 import prisma from "@/app/libs/prismadb";
 
 
-const authOptions : AuthOptions = {
+export const authOptions : AuthOptions = {
     adapter: PrismaAdapter(prisma),
     providers: [
         GithubProvider({
@@ -61,6 +62,10 @@ const authOptions : AuthOptions = {
         strategy: "jwt",
     },
     secret: process.env.NEXTAUTH_SECRET,
+}
+
+export async function getSession(){
+    return await getServerSession(authOptions);
 }
 
 const handler = NextAuth(authOptions)
